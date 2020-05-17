@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lan="en">
+
+	<head>
+		<title>Pizza Drill Demo</title>
+        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+        <meta content="width=device-width,initial-scale=1.0" name="viewport">
+        <link rel="stylesheet" type="text/css" href="./Pizza_CSS/Pizza_CSS.css" />
+    </head>
+    
+	<body>
+        <div id="menuBG">
+            <h1 style="margin: 0 0px 0 20px;">Pizza Drill Tutorial</h1>
+            <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+            <form id="frmMenu">
+                <div class="menu left">
+                    <h3>Size:</h3>
+                    <input class="size" type="radio" name="Size" value="Personal Pizza"><label>Personal Pizza</label><br>
+                    <input class="size" type="radio" name="size" Value="Small"><label>Small</label><br>
+                    <input class="size" type="radio" name="Size" value="Medium Pizza"><label>Medium Pizza</label><br>
+                    <input class="size" type="radio" name="Size" value="Large Pizza"><label>Large Pizza</label><br>
+                    <input class="size" type="radio" name="Size" value="Extra Large Pizza"><label>Extra Large Pizza</label><br>
+                </div>
+
+                <div class="menu right">
+                    <h3>Meats:</h3>
+                    <input class="meats" type="checkbox" name="Meat" value="Pepperoni"><label>Pepperoni</label><br>
+                    <input class="meats" type="checkbox" name="Meat" value="Sausage"><label>Sausage</label><br>
+                    <input class="meats" type="checkbox" name="Meat" value="Salami"><label>Salami</label><br>
+                    <input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"><label>Canadian Bacon</label><br>
+                    <input class="meats" type="checkbox" name="Meat" value="Ground Beef"><label>Ground Beef</label><br>
+                    <input class="meats" type="checkbox" name="Meat" value="Anchovy"><label>Anchovy</label><br>
+                    <input class="meats" type="checkbox" name="Meat" value="Chicken"><label>Chicken</label><br>
+                </div>
+
+                <div class="menu right">
+                    <h3>Vegetables:</h3>
+                    <input class="veggies" type="checkbox" name="Veggie" value="Onion"><label>Onion</label><br>
+                    <input class="veggies" type="checkbox" name="Veggie" value="Green Pepper"><label>Green Pepper</label><br>
+                    <input class="veggies" type="checkbox" name="Veggie" value="Olive"><label>Olive</label><br><br>
+                    <h3>Other Options:</h3>
+                    <input class="other" type="checkbox" name="OtherOpts" value="Cheese"><label>Extra Cheese</label><br>
+                    <input class="other" type="checkbox" name="OtherOpts" value="Sauce"><label>Extra Sauce</label><br>
+                </div>
+                
+                <div id="cart">
+                    <div id="showText"></div>
+                    <div id="totalPrice"></div>
+                </div>
+            </form>
+        </div>
+        <script src="./Pizza_JS/Pizza_JS.js"></script>
+
+    </body>
+</html>
