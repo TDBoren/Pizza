@@ -28,8 +28,8 @@ function getReceipt() {
     console.log("subtotal: $"+runningTotal+".00");
     // these variables will be passed on to each function
     getMeat(runningTotal,text1);
-    getVeggie(runningTotal,text1);
-    getOther(runningTotal,text1);
+    
+    
 };
 
 function getMeat(runningTotal,text1) {
@@ -40,7 +40,7 @@ function getMeat(runningTotal,text1) {
         if (meatArray[j].checked) {
             selectedMeat.push(meatArray[j].value);
             console.log("selected meat item: ("+meatArray[j].value+")");
-            text1 = text1+meatArray[j].value+"<br>";
+            text1 = text1+meatArray[j].value+"<br>";    
         }
     }
     var meatCount = selectedMeat.length;
@@ -56,6 +56,7 @@ function getMeat(runningTotal,text1) {
     console.log("Purchase Total: "+"$"+runningTotal+".00");
     document.getElementById("showText").innerHTML=text1;
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+    getVeggie(runningTotal,text1);
 }
 function getVeggie(runningTotal,text1) {
     var veggieTotal = 0;
@@ -66,6 +67,7 @@ function getVeggie(runningTotal,text1) {
             selectedVeggie.push(veggieArray[k].value);
             console.log("selected veggie item: ("+veggieArray[k].value+")");
             text1 = text1+veggieArray[k].value+"<br>";
+
         }
     }
     var veggieCount = selectedVeggie.length;
@@ -81,6 +83,7 @@ function getVeggie(runningTotal,text1) {
     console.log("Purchase Total: "+"$"+runningTotal+".00");
     document.getElementById("showText").innerHTML=text1;
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+    getOther(runningTotal,text1);
 }
 
 function getOther(runningTotal,text1) {
